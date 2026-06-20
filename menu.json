@@ -3,12 +3,13 @@
     "title": "黑白切（炸物）",
     "items": [
       { "name": "雞排", "price": 80 },
+      { "name": "雞翅(1支)", "price": 25 },
       { "name": "魷魚", "price": 80 },
       { "name": "鹽酥雞", "price": 50 },
       { "name": "三角骨", "price": 50 },
       { "name": "脆薯", "price": 50 },
       { "name": "花枝丸", "price": 35 },
-      { "name": "紅龍小香球(7顆)", "price": 30 },
+      { "name": "紅龍小雞球(7顆)", "price": 30 },
       { "name": "甜不辣", "price": 30 },
       { "name": "豆干", "price": 30 },
       { "name": "百頁豆腐", "price": 30 },
@@ -16,8 +17,7 @@
       { "name": "四季豆", "price": 30 },
       { "name": "芋頭包", "price": 30 },
       { "name": "薯條", "price": 30 },
-      { "name": "小肉條", "price": 30 },
-      { "name": "雞蛋(1支)", "price": 25 }
+      { "name": "小肉豆", "price": 30 }
     ]
   },
   {
