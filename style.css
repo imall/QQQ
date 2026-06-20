@@ -1,0 +1,103 @@
+:root {
+  --orange: #f26522;
+  --green: #5fae3a;
+  --red: #d62828;
+  --ink: #2b2b2b;
+  --paper: #fffdf7;
+  --line: #ece4d3;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+  background: #f4efe4;
+  color: var(--ink);
+}
+header {
+  background: linear-gradient(135deg, var(--orange), #ff8a3d);
+  color: #fff;
+  padding: 18px 16px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+header .logo { font-size: 30px; font-weight: 900; letter-spacing: 2px; }
+header .logo span { color: #fff200; }
+header .sub { font-size: 14px; opacity: .95; margin-top: 4px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 12px 12px 120px; }
+.group-title {
+  font-size: 18px; font-weight: 800; color: var(--green);
+  margin: 18px 4px 8px; padding-left: 8px;
+  border-left: 5px solid var(--green);
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.item.active { border-color: var(--orange); box-shadow: 0 2px 8px rgba(242,101,34,.25); }
+.item .info .name { font-weight: 700; font-size: 16px; }
+.item .info .price { color: var(--red); font-weight: 700; font-size: 14px; margin-top: 2px; }
+.stepper { display: flex; align-items: center; gap: 8px; }
+.stepper button {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: none; font-size: 20px; font-weight: 800; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .05s, background .15s;
+}
+.stepper button:active { transform: scale(.9); }
+.stepper .minus { background: #eee; color: #888; }
+.stepper .minus:enabled { color: var(--ink); }
+.stepper .plus { background: var(--orange); color: #fff; }
+.stepper .qty { width: 26px; text-align: center; font-weight: 800; font-size: 17px; }
+
+.bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: #fff; border-top: 1px solid var(--line);
+  padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+}
+.bar .total { font-size: 15px; }
+.bar .total b { color: var(--red); font-size: 24px; }
+.bar .count { color: #777; font-size: 13px; }
+.done-btn {
+  background: var(--green); color: #fff; border: none;
+  padding: 12px 28px; border-radius: 30px; font-size: 17px; font-weight: 800;
+  cursor: pointer; box-shadow: 0 3px 10px rgba(95,174,58,.4);
+}
+.done-btn:disabled { background: #bbb; box-shadow: none; cursor: not-allowed; }
+
+.overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.5);
+  display: flex; align-items: center; justify-content: center; padding: 16px; z-index: 20;
+}
+.modal {
+  background: #fff; border-radius: 16px; width: 100%; max-width: 460px;
+  max-height: 85vh; display: flex; flex-direction: column; overflow: hidden;
+}
+.modal h2 {
+  margin: 0; padding: 16px; text-align: center; background: var(--orange); color: #fff; font-size: 20px;
+}
+.modal .list { padding: 8px 16px; overflow-y: auto; }
+.modal .row {
+  display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line);
+}
+.modal .row .nm { font-weight: 600; }
+.modal .row .qx { color: #888; font-size: 13px; margin-left: 6px; }
+.modal .row .amt { color: var(--red); font-weight: 700; }
+.modal .sum {
+  padding: 14px 16px; border-top: 2px solid var(--ink);
+  display: flex; justify-content: space-between; align-items: center; font-size: 18px;
+}
+.modal .sum b { color: var(--red); font-size: 26px; }
+.modal .foot { padding: 0 16px 16px; display: flex; gap: 10px; }
+.modal .foot button { flex: 1; padding: 12px; border-radius: 28px; border: none; font-size: 16px; font-weight: 700; cursor: pointer; }
+.modal .close { background: #eee; color: var(--ink); }
+.modal .reset { background: var(--red); color: #fff; }
+.empty { text-align: center; color: #999; padding: 30px; }
