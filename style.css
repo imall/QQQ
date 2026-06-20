@@ -26,6 +26,12 @@ header {
 header .logo { font-size: 30px; font-weight: 900; letter-spacing: 2px; }
 header .logo span { color: #fff200; }
 header .sub { font-size: 14px; opacity: .95; margin-top: 4px; }
+header .sub .tel {
+  color: #fff; font-weight: 700; text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,.7);
+  padding-bottom: 1px; white-space: nowrap;
+}
+header .sub .tel:active { opacity: .7; }
 .wrap { max-width: 760px; margin: 0 auto; padding: 12px 12px 120px; }
 .group-title {
   font-size: 18px; font-weight: 800; color: var(--green);
